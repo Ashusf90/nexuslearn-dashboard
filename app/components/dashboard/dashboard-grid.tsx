@@ -24,7 +24,6 @@ const item = {
     opacity: 1,
     y: 0,
     transition: {
-      type: "spring",
       stiffness: 120,
       damping: 18,
     },
@@ -43,7 +42,10 @@ export default function DashboardGrid({
       animate="show"
       className="grid grid-cols-1 lg:grid-cols-3 gap-6"
     >
-      <motion.div variants={item} className="lg:col-span-2">
+      <motion.div
+        variants={item}
+        className="lg:col-span-2"
+      >
         <HeroTile />
       </motion.div>
 
